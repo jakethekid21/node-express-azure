@@ -27,3 +27,11 @@ steps:
 - task: PublishBuildArtifacts@1
   displayName: 'Publish artifacts: drop'
   
+- task: SnykSecurityScan@1
+  inputs:
+    serviceConnectionEndpoint: 'snykConnect'
+    testType: 'app'
+    monitorWhen: 'always'
+    failOnIssues: true
+    projectName: 'node-express-azure'
+    organization: 'jacobpalomo21'
