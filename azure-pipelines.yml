@@ -35,3 +35,12 @@ steps:
     failOnIssues: true
     projectName: 'node-express-azure'
     organization: 'jacobpalomo21'
+    
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.8'
+  displayName: 'Install Python 3.8'
+- script: pip install bridgecrew
+  displayName: 'Install the Bridgecrew CLI'
+- script: bridgecrew -d jakethekid21/node-express-azure --bc-api-key dcc4fee1-f2e0-4c5e-b870-882dda7e9cf6 --repo-id jakethekid21/node-express-azure --branch master
+  displayName: 'Scan with Bridgecrew'
