@@ -33,6 +33,6 @@ steps:
     testType: 'app'
     monitorWhen: 'always'
     failOnIssues: true
-    projectName: 'jakethekid21/node-express-azure'
+    projectName: 'node-express-azure'
     organization: 'jacobpalomo21'
 
