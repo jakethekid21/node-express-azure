@@ -19,14 +19,7 @@ steps:
     npm install
     npm run build
   displayName: 'npm install and build'
-- task: SnykSecurityScan@1
-  inputs:
-    serviceConnectionEndpoint: 'snykConnect'
-    testType: 'app'
-    monitorWhen: 'always'
-    failOnIssues: false
-    projectName: 'node-express-azure'
-    organization: 'jacobpalomo21'
+
 - task: SonarQubePrepare@4
   inputs:
     SonarQube: 'sonarQubeConnectionOne'
