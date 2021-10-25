@@ -27,3 +27,10 @@ steps:
     failOnIssues: false
     projectName: 'node-express-azure'
     organization: 'jacobpalomo21'
+- task: SonarQubePrepare@4
+  inputs:
+    SonarQube: 'sonarQubeConnectionOne'
+    scannerMode: 'CLI'
+    configMode: 'manual'
+    cliProjectKey: 'NodeExpressDemo_NodeExpressDemo'
+    cliSources: '.'
