@@ -23,10 +23,10 @@ steps:
 - task: SonarQubePrepare@4
   inputs:
     SonarQube: 'sonarQubeConnectionOne'
-    scannerMode: 'CLI'
-    configMode: 'manual'
-    cliProjectKey: 'NodeExpressDemo_NodeExpressDemo'
-    cliSources: '.'
+    scannerMode: 'MSBuild'
+    projectKey: 'NodeExpressDemo_NodeExpressDemo'
+- task: SonarQubeAnalyze@4
 - task: SonarQubePublish@4
   inputs:
     pollingTimeoutSec: '300'
+
