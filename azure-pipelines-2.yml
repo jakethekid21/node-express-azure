@@ -27,3 +27,6 @@ steps:
     configMode: 'manual'
     cliProjectKey: 'NodeExpressDemo_NodeExpressDemo'
     cliSources: '.'
+- task: SonarQubePublish@4
+  inputs:
+    pollingTimeoutSec: '300'
