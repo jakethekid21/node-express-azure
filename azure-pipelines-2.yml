@@ -20,18 +20,15 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
-
-- task: SonarQubePrepare@4
+- task: SonarQubePrepare@5
   inputs:
-    SonarQube: 'sonarQubeConnectionOne'
-    scannerMode: 'Other'
-    extraProperties: |
-      # Additional properties that will be passed to the scanner, 
-      # Put one key=value per line, example:
-      # sonar.exclusions=**/*.bin
-      sonar.projectName=MyShuttle
-      sonar.projectKey=MyShuttle
-- task: SonarQubePublish@4
+    SonarQube: 'SonarQubeThree'
+    scannerMode: 'CLI'
+    configMode: 'manual'
+    cliProjectKey: 'MyShuttleTwo'
+    cliProjectName: 'tryThree'
+    cliSources: '.'
+- task: SonarQubeAnalyze@5
+- task: SonarQubePublish@5
   inputs:
     pollingTimeoutSec: '300'
-
