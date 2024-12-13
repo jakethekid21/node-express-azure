@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "*",
+    "express": "4.21.2",
     "express-handlebars": "3.0.0"
   },
   "devDependencies": {
